@@ -1,14 +1,14 @@
 
- Network wendelllsc_backend  Creating
- Network wendelllsc_backend  Created
- Container postgres_api  Creating
- Container postgres_api  Created
- Container api2  Creating
- Container api1  Creating
- Container api1  Created
- Container api2  Created
- Container haproxy  Creating
- Container haproxy  Created
+Network wendelllsc_backend  Creating
+Network wendelllsc_backend  Created
+Container postgres_api  Creating
+Container postgres_api  Created
+Container api2  Creating
+Container api1  Creating
+Container api1  Created
+Container api2  Created
+Container haproxy  Creating
+Container haproxy  Created
 Attaching to api1, api2, haproxy, postgres_api
 postgres_api  | The files belonging to this database system will be owned by user "postgres".
 postgres_api  | This user must also own the server process.
@@ -27,22 +27,22 @@ postgres_api  | selecting default "shared_buffers" ... 128MB
 postgres_api  | selecting default time zone ... UTC
 postgres_api  | creating configuration files ... ok
 postgres_api  | running bootstrap script ... ok
-postgres_api  | sh: locale: not found
-postgres_api  | 2025-08-07 00:33:34.008 UTC [36] WARNING:  no usable system locales were found
-postgres_api  | performing post-bootstrap initialization ... ok
-postgres_api  | initdb: warning: enabling "trust" authentication for local connections
+postgres_api  | performing post-bootstrap initialization ... sh: locale: not found
+postgres_api  | 2025-08-07 09:10:28.315 UTC [35] WARNING:  no usable system locales were found
+postgres_api  | ok
+postgres_api  | syncing data to disk ... initdb: warning: enabling "trust" authentication for local connections
 postgres_api  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-postgres_api  | syncing data to disk ... ok
+postgres_api  | ok
 postgres_api  | 
 postgres_api  | 
 postgres_api  | Success. You can now start the database server using:
 postgres_api  | 
 postgres_api  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres_api  | 
-postgres_api  | waiting for server to start....2025-08-07 00:33:40.514 UTC [60] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres_api  | 2025-08-07 00:33:40.522 UTC [60] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres_api  | 2025-08-07 00:33:40.603 UTC [63] LOG:  database system was shut down at 2025-08-07 00:33:39 UTC
-postgres_api  | 2025-08-07 00:33:40.613 UTC [60] LOG:  database system is ready to accept connections
+postgres_api  | waiting for server to start....2025-08-07 09:10:28.761 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres_api  | 2025-08-07 09:10:28.762 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_api  | 2025-08-07 09:10:28.767 UTC [44] LOG:  database system was shut down at 2025-08-07 09:10:28 UTC
+postgres_api  | 2025-08-07 09:10:28.772 UTC [41] LOG:  database system is ready to accept connections
 postgres_api  |  done
 postgres_api  | server started
 postgres_api  | CREATE DATABASE
@@ -53,28 +53,32 @@ postgres_api  | CREATE TABLE
 postgres_api  | CREATE INDEX
 postgres_api  | 
 postgres_api  | 
-postgres_api  | waiting for server to shut down....2025-08-07 00:33:41.616 UTC [60] LOG:  received fast shutdown request
-postgres_api  | 2025-08-07 00:33:41.623 UTC [60] LOG:  aborting any active transactions
-postgres_api  | 2025-08-07 00:33:41.704 UTC [60] LOG:  background worker "logical replication launcher" (PID 66) exited with exit code 1
-postgres_api  | 2025-08-07 00:33:41.802 UTC [61] LOG:  shutting down
-postgres_api  | 2025-08-07 00:33:41.809 UTC [61] LOG:  checkpoint starting: shutdown immediate
-postgres_api  | 2025-08-07 00:33:42.302 UTC [81] FATAL:  the database system is shutting down
-postgres_api  | 2025-08-07 00:33:42.317 UTC [61] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.088 s, sync=0.398 s, total=0.516 s; sync files=311, longest=0.085 s, average=0.002 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A308, redo lsn=0/191A308
-postgres_api  | 2025-08-07 00:33:42.406 UTC [60] LOG:  database system is shut down
+postgres_api  | waiting for server to shut down....2025-08-07 09:10:28.939 UTC [41] LOG:  received fast shutdown request
+postgres_api  | 2025-08-07 09:10:28.941 UTC [41] LOG:  aborting any active transactions
+postgres_api  | 2025-08-07 09:10:28.943 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+postgres_api  | 2025-08-07 09:10:28.943 UTC [42] LOG:  shutting down
+postgres_api  | 2025-08-07 09:10:28.944 UTC [42] LOG:  checkpoint starting: shutdown immediate
+postgres_api  | 2025-08-07 09:10:28.990 UTC [42] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.024 s, sync=0.018 s, total=0.047 s; sync files=311, longest=0.003 s, average=0.001 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A308, redo lsn=0/191A308
+postgres_api  | 2025-08-07 09:10:28.997 UTC [41] LOG:  database system is shut down
 postgres_api  |  done
 postgres_api  | server stopped
 postgres_api  | 
 postgres_api  | PostgreSQL init process complete; ready for start up.
 postgres_api  | 
-postgres_api  | 2025-08-07 00:33:42.607 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres_api  | 2025-08-07 00:33:42.607 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres_api  | 2025-08-07 00:33:42.607 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-postgres_api  | 2025-08-07 00:33:42.618 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres_api  | 2025-08-07 00:33:42.632 UTC [85] LOG:  database system was shut down at 2025-08-07 00:33:42 UTC
-postgres_api  | 2025-08-07 00:33:42.710 UTC [1] LOG:  database system is ready to accept connections
+postgres_api  | 2025-08-07 09:10:29.060 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres_api  | 2025-08-07 09:10:29.060 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres_api  | 2025-08-07 09:10:29.060 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres_api  | 2025-08-07 09:10:29.062 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_api  | 2025-08-07 09:10:29.067 UTC [59] LOG:  database system was shut down at 2025-08-07 09:10:28 UTC
+postgres_api  | 2025-08-07 09:10:29.071 UTC [1] LOG:  database system is ready to accept connections
+haproxy       | [NOTICE]   (1) : Initializing new worker (8)
 api1          | 
 api1          |   .   ____          _            __ _ _
+api2          | 
+api2          |   .   ____          _            __ _ _
+api2          |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 api1          |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api2          | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
 api1          | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
 api1          |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
 api1          |   '  |____| .__|_| |_|_| |_\__, | / / / /
@@ -82,83 +86,916 @@ api1          |  =========|_|==============|___/=/_/_/_/
 api1          | 
 api1          |  :: Spring Boot ::                (v3.5.4)
 api1          | 
-api1          | 2025-08-07T00:33:46.222Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Starting AOT-processed Server using Java 21.0.7 with PID 1 (/workspace/br.com.wlsc.api.Server started by cnb in /workspace)
-api1          | 2025-08-07T00:33:46.222Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : The following 1 profile is active: "dev"
-api2          | 
-api2          |   .   ____          _            __ _ _
-api2          |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-api2          | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
 api2          |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
 api2          |   '  |____| .__|_| |_|_| |_\__, | / / / /
 api2          |  =========|_|==============|___/=/_/_/_/
 api2          | 
 api2          |  :: Spring Boot ::                (v3.5.4)
 api2          | 
-api2          | 2025-08-07T00:33:46.224Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Starting AOT-processed Server using Java 21.0.7 with PID 1 (/workspace/br.com.wlsc.api.Server started by cnb in /workspace)
-api2          | 2025-08-07T00:33:46.224Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : The following 1 profile is active: "dev"
-api1          | 2025-08-07T00:33:46.250Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-api1          | 2025-08-07T00:33:46.251Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-api1          | 2025-08-07T00:33:46.251Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-api2          | 2025-08-07T00:33:46.250Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-api2          | 2025-08-07T00:33:46.251Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-api2          | 2025-08-07T00:33:46.251Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-api1          | 2025-08-07T00:33:46.264Z  INFO 1 --- [api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-api2          | 2025-08-07T00:33:46.264Z  INFO 1 --- [api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-api1          | 2025-08-07T00:33:46.264Z  INFO 1 --- [api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 42 ms
-api2          | 2025-08-07T00:33:46.264Z  INFO 1 --- [api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 40 ms
-api2          | 2025-08-07T00:33:46.314Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-api1          | 2025-08-07T00:33:46.322Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-api2          | 2025-08-07T00:33:46.334Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21b52575
-api2          | 2025-08-07T00:33:46.334Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-api1          | 2025-08-07T00:33:46.336Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d3d8f31
-api1          | 2025-08-07T00:33:46.336Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-api2          | 2025-08-07T00:33:46.370Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-api2          | 2025-08-07T00:33:46.370Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Started Server in 0.166 seconds (process running for 0.176)
-api2          | 2025-08-07T00:33:46.371Z  INFO 1 --- [api] [           main] br.com.wlsc.api.worker.PaymentWorker     : Starting workers
-api1          | 2025-08-07T00:33:46.416Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-api1          | 2025-08-07T00:33:46.417Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Started Server in 0.223 seconds (process running for 0.253)
-api1          | 2025-08-07T00:33:46.417Z  INFO 1 --- [api] [           main] br.com.wlsc.api.worker.PaymentWorker     : Starting workers
-haproxy       | [NOTICE]   (1) : Initializing new worker (8)
+api2          | 2025-08-07T09:10:32.218Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Starting AOT-processed Server using Java 21.0.7 with PID 1 (/workspace/br.com.wlsc.api.Server started by cnb in /workspace)
+api2          | 2025-08-07T09:10:32.220Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : The following 1 profile is active: "dev"
+api1          | 2025-08-07T09:10:32.218Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Starting AOT-processed Server using Java 21.0.7 with PID 1 (/workspace/br.com.wlsc.api.Server started by cnb in /workspace)
+api1          | 2025-08-07T09:10:32.220Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : The following 1 profile is active: "dev"
 haproxy       | [NOTICE]   (1) : Loading success.
-api1          | 2025-08-07T00:33:46.904Z  INFO 1 --- [api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-api1          | 2025-08-07T00:33:46.904Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-api1          | 2025-08-07T00:33:46.904Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-api1          | 2025-08-07T00:33:46.905Z  WARN 1 --- [api] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api2          | 2025-08-07T00:33:51.921Z  INFO 1 --- [api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-api2          | 2025-08-07T00:33:51.921Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-api2          | 2025-08-07T00:33:51.922Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-api2          | 2025-08-07T00:33:51.923Z  WARN 1 --- [api] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api1          | 2025-08-07T00:33:56.938Z  WARN 1 --- [api] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api2          | 2025-08-07T00:34:01.951Z  WARN 1 --- [api] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api1          | 2025-08-07T00:34:06.962Z  WARN 1 --- [api] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api2          | 2025-08-07T00:34:11.973Z  WARN 1 --- [api] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api1          | 2025-08-07T00:34:16.983Z  WARN 1 --- [api] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api2          | 2025-08-07T00:34:21.993Z  WARN 1 --- [api] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api1          | 2025-08-07T00:34:27.004Z  WARN 1 --- [api] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api2          | 2025-08-07T00:34:32.014Z  WARN 1 --- [api] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-api1          | 2025-08-07T00:34:37.024Z  WARN 1 --- [api] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type Instant is not present]
-haproxy       | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
-haproxy       | [WARNING]  (1) : Exiting Master process...
-haproxy       | [WARNING]  (8) : Proxy http-in stopped (cumulated conns: FE: 11, BE: 0).
-haproxy       | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 11).
-haproxy       | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
-haproxy       | [WARNING]  (1) : All workers exited. Exiting... (0)
-[Khaproxy exited with code 0
-api1          | 2025-08-07T00:34:42.545Z  INFO 1 --- [api] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-api1          | 2025-08-07T00:34:42.546Z  INFO 1 --- [api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-api1          | 2025-08-07T00:34:42.547Z  INFO 1 --- [api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-api2          | 2025-08-07T00:34:42.548Z  INFO 1 --- [api] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-api2          | 2025-08-07T00:34:42.550Z  INFO 1 --- [api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-api1          | 2025-08-07T00:34:42.552Z  INFO 1 --- [api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-api2          | 2025-08-07T00:34:42.553Z  INFO 1 --- [api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-api2          | 2025-08-07T00:34:42.553Z  INFO 1 --- [api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-[Kapi1 exited with code 143
-[Kapi2 exited with code 143
-postgres_api  | 2025-08-07 00:34:43.132 UTC [1] LOG:  received fast shutdown request
-postgres_api  | 2025-08-07 00:34:43.150 UTC [1] LOG:  aborting any active transactions
-postgres_api  | 2025-08-07 00:34:43.202 UTC [1] LOG:  background worker "logical replication launcher" (PID 88) exited with exit code 1
-postgres_api  | 2025-08-07 00:34:43.202 UTC [83] LOG:  shutting down
-postgres_api  | 2025-08-07 00:34:43.213 UTC [83] LOG:  checkpoint starting: shutdown immediate
-postgres_api  | 2025-08-07 00:34:43.265 UTC [83] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.019 s, total=0.064 s; sync files=5, longest=0.012 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/191A3B8, redo lsn=0/191A3B8
-postgres_api  | 2025-08-07 00:34:43.303 UTC [1] LOG:  database system is shut down
-[Kpostgres_api exited with code 0
+haproxy       | [WARNING]  (8) : Server backend/api1 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+api2          | 2025-08-07T09:10:32.271Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+api1          | 2025-08-07T09:10:32.271Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+api1          | 2025-08-07T09:10:32.280Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api1          | 2025-08-07T09:10:32.280Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+api2          | 2025-08-07T09:10:32.280Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api2          | 2025-08-07T09:10:32.280Z  INFO 1 --- [api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+api1          | 2025-08-07T09:10:32.309Z  INFO 1 --- [api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api2          | 2025-08-07T09:10:32.309Z  INFO 1 --- [api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api1          | 2025-08-07T09:10:32.309Z  INFO 1 --- [api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 88 ms
+api2          | 2025-08-07T09:10:32.309Z  INFO 1 --- [api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 88 ms
+api1          | 2025-08-07T09:10:32.367Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+api2          | 2025-08-07T09:10:32.367Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+api2          | 2025-08-07T09:10:32.401Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7acc5cb6
+api2          | 2025-08-07T09:10:32.401Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+api1          | 2025-08-07T09:10:32.401Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46ca68b5
+api1          | 2025-08-07T09:10:32.401Z  INFO 1 --- [api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+api1          | 2025-08-07T09:10:32.431Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+api2          | 2025-08-07T09:10:32.432Z  INFO 1 --- [api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+api2          | 2025-08-07T09:10:32.432Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Started Server in 0.324 seconds (process running for 0.599)
+api1          | 2025-08-07T09:10:32.432Z  INFO 1 --- [api] [           main] br.com.wlsc.api.Server                   : Started Server in 0.324 seconds (process running for 0.599)
+api2          | 2025-08-07T09:10:32.433Z  INFO 1 --- [api] [           main] br.com.wlsc.api.worker.PaymentWorker     : Starting workers
+api1          | 2025-08-07T09:10:32.433Z  INFO 1 --- [api] [           main] br.com.wlsc.api.worker.PaymentWorker     : Starting workers
+api2          | 2025-08-07T09:10:33.258Z  INFO 1 --- [api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+api2          | 2025-08-07T09:10:33.258Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+api2          | 2025-08-07T09:10:33.258Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+haproxy       | [WARNING]  (8) : Server backend/api1 is UP, reason: Layer4 check passed, check duration: 0ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+api1          | 2025-08-07T09:10:38.900Z  INFO 1 --- [api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+api1          | 2025-08-07T09:10:38.900Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+api1          | 2025-08-07T09:10:38.900Z  INFO 1 --- [api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+api2          | 2025-08-07T09:10:38.904Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ec63b56d-2d31-4138-a88e-91c9a5cfcafc
+api2          | 2025-08-07T09:10:38.935Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ec63b56d-2d31-4138-a88e-91c9a5cfcafc received successfully
+api2          | 2025-08-07T09:10:38.941Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.009Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5fef2835-06f3-4765-85f9-e4d409ae0d35
+api1          | 2025-08-07T09:10:39.020Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5fef2835-06f3-4765-85f9-e4d409ae0d35 received successfully
+api1          | 2025-08-07T09:10:39.024Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:39.118Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 784c1ea0-e348-4b6e-b8e7-7f044e9f7d7c
+api2          | 2025-08-07T09:10:39.119Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 784c1ea0-e348-4b6e-b8e7-7f044e9f7d7c received successfully
+api2          | 2025-08-07T09:10:39.120Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.228Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2f0193e2-764b-4508-8d40-d3875665cb2d
+api1          | 2025-08-07T09:10:39.229Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2f0193e2-764b-4508-8d40-d3875665cb2d received successfully
+api1          | 2025-08-07T09:10:39.229Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:39.337Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5ee0be28-82a5-4a20-8090-9e9acb2b6c35
+api2          | 2025-08-07T09:10:39.338Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5ee0be28-82a5-4a20-8090-9e9acb2b6c35 received successfully
+api2          | 2025-08-07T09:10:39.338Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.446Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5b25cc92-731d-40ab-bce2-5fd076b2bf16
+api1          | 2025-08-07T09:10:39.447Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5b25cc92-731d-40ab-bce2-5fd076b2bf16 received successfully
+api1          | 2025-08-07T09:10:39.447Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:39.555Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a71156e7-b71d-4613-9951-8aed12d6939a
+api2          | 2025-08-07T09:10:39.556Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a71156e7-b71d-4613-9951-8aed12d6939a received successfully
+api2          | 2025-08-07T09:10:39.556Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.664Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2ddb82d5-2d67-4bf6-ac0f-95c61a4a3402
+api1          | 2025-08-07T09:10:39.665Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2ddb82d5-2d67-4bf6-ac0f-95c61a4a3402 received successfully
+api1          | 2025-08-07T09:10:39.666Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:39.774Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4cf42759-0e37-49f8-a8b8-cad1d6f6c8e4
+api2          | 2025-08-07T09:10:39.775Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4cf42759-0e37-49f8-a8b8-cad1d6f6c8e4 received successfully
+api2          | 2025-08-07T09:10:39.775Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.884Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 673f6c18-5dc8-4335-aa76-856a8a06e3e7
+api1          | 2025-08-07T09:10:39.885Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 673f6c18-5dc8-4335-aa76-856a8a06e3e7 received successfully
+api1          | 2025-08-07T09:10:39.885Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:39.906Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 46fcb580-f851-4c4f-8df2-45fad4c575e9
+api2          | 2025-08-07T09:10:39.907Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 46fcb580-f851-4c4f-8df2-45fad4c575e9 received successfully
+api2          | 2025-08-07T09:10:39.907Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:39.993Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f3c1c6c3-6cba-4d75-8823-5494e6386541
+api1          | 2025-08-07T09:10:39.994Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f3c1c6c3-6cba-4d75-8823-5494e6386541 received successfully
+api1          | 2025-08-07T09:10:39.994Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.011Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3c2aa9f4-c97d-4117-8255-1dca6c3cf8ba
+api2          | 2025-08-07T09:10:40.012Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3c2aa9f4-c97d-4117-8255-1dca6c3cf8ba received successfully
+api2          | 2025-08-07T09:10:40.012Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.102Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d7e83cb1-fd95-40e8-8cd5-1a98f3d13d6b
+api1          | 2025-08-07T09:10:40.103Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d7e83cb1-fd95-40e8-8cd5-1a98f3d13d6b received successfully
+api1          | 2025-08-07T09:10:40.103Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.120Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8dea8b14-667e-44a0-8926-922306f6c37f
+api2          | 2025-08-07T09:10:40.121Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8dea8b14-667e-44a0-8926-922306f6c37f received successfully
+api2          | 2025-08-07T09:10:40.121Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.212Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6025dfdb-bf2a-4252-be81-77c3caf15e87
+api1          | 2025-08-07T09:10:40.213Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6025dfdb-bf2a-4252-be81-77c3caf15e87 received successfully
+api1          | 2025-08-07T09:10:40.213Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.229Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6b114719-1b2e-4774-a6d3-c6aefc3dde7f
+api2          | 2025-08-07T09:10:40.230Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6b114719-1b2e-4774-a6d3-c6aefc3dde7f received successfully
+api2          | 2025-08-07T09:10:40.230Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.320Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending cec2ce8d-efb9-44bb-ba01-0d76f00da78c
+api1          | 2025-08-07T09:10:40.321Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment cec2ce8d-efb9-44bb-ba01-0d76f00da78c received successfully
+api1          | 2025-08-07T09:10:40.322Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.339Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8e5bc68a-5e06-441a-9401-5d490be02f20
+api2          | 2025-08-07T09:10:40.340Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8e5bc68a-5e06-441a-9401-5d490be02f20 received successfully
+api2          | 2025-08-07T09:10:40.340Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.429Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f0dbfb30-87b5-45dc-b363-13131cafac68
+api1          | 2025-08-07T09:10:40.430Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f0dbfb30-87b5-45dc-b363-13131cafac68 received successfully
+api1          | 2025-08-07T09:10:40.431Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.447Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 325e8c00-676f-4e5a-9a23-00c107592078
+api2          | 2025-08-07T09:10:40.448Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 325e8c00-676f-4e5a-9a23-00c107592078 received successfully
+api2          | 2025-08-07T09:10:40.448Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.539Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 66b688fa-2968-40fe-bc79-2689622b7182
+api1          | 2025-08-07T09:10:40.540Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 66b688fa-2968-40fe-bc79-2689622b7182 received successfully
+api1          | 2025-08-07T09:10:40.540Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.557Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 54221b5d-7bc0-4264-b5ba-9b32a338757c
+api2          | 2025-08-07T09:10:40.558Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 54221b5d-7bc0-4264-b5ba-9b32a338757c received successfully
+api2          | 2025-08-07T09:10:40.558Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.649Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e114c373-931b-4de6-a632-77665bc46485
+api1          | 2025-08-07T09:10:40.650Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e114c373-931b-4de6-a632-77665bc46485 received successfully
+api1          | 2025-08-07T09:10:40.650Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.665Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f7c33a46-f012-4154-aaf1-0c9e4dde48f2
+api2          | 2025-08-07T09:10:40.666Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f7c33a46-f012-4154-aaf1-0c9e4dde48f2 received successfully
+api2          | 2025-08-07T09:10:40.666Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.758Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 546d9e9a-bdb6-4445-bde4-57a96d70bc7b
+api1          | 2025-08-07T09:10:40.759Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 546d9e9a-bdb6-4445-bde4-57a96d70bc7b received successfully
+api1          | 2025-08-07T09:10:40.760Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.776Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b260418a-eeb9-43b8-96b8-8943fe419cf0
+api2          | 2025-08-07T09:10:40.776Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b260418a-eeb9-43b8-96b8-8943fe419cf0 received successfully
+api2          | 2025-08-07T09:10:40.777Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.872Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3ca4e52b-84f0-40c5-bdb0-4ccef5387759
+api1          | 2025-08-07T09:10:40.873Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3ca4e52b-84f0-40c5-bdb0-4ccef5387759 received successfully
+api1          | 2025-08-07T09:10:40.874Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.886Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d3609679-8f8e-42be-812b-a96b2cd4a769
+api2          | 2025-08-07T09:10:40.886Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d3609679-8f8e-42be-812b-a96b2cd4a769 received successfully
+api2          | 2025-08-07T09:10:40.887Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.907Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 75af7dd5-3471-45dd-8049-640aaace356d
+api1          | 2025-08-07T09:10:40.909Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 75af7dd5-3471-45dd-8049-640aaace356d received successfully
+api1          | 2025-08-07T09:10:40.909Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:40.977Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1e1a88f1-ebcb-446a-b15f-8a081e6af004
+api2          | 2025-08-07T09:10:40.978Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1e1a88f1-ebcb-446a-b15f-8a081e6af004 received successfully
+api2          | 2025-08-07T09:10:40.978Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:40.994Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4e1879f6-a585-46c3-bcad-ab30966195cb
+api1          | 2025-08-07T09:10:40.995Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4e1879f6-a585-46c3-bcad-ab30966195cb received successfully
+api1          | 2025-08-07T09:10:40.995Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.012Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 907d5662-bd18-4cdc-99a1-2456a27e955b
+api2          | 2025-08-07T09:10:41.013Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 907d5662-bd18-4cdc-99a1-2456a27e955b received successfully
+api2          | 2025-08-07T09:10:41.013Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.086Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 55b82ffb-c433-419a-9c93-bbc16325c197
+api1          | 2025-08-07T09:10:41.086Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 55b82ffb-c433-419a-9c93-bbc16325c197 received successfully
+api1          | 2025-08-07T09:10:41.087Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.104Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4406385d-3a93-4ca7-b2e7-17769f6db929
+api2          | 2025-08-07T09:10:41.104Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4406385d-3a93-4ca7-b2e7-17769f6db929 received successfully
+api2          | 2025-08-07T09:10:41.104Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.122Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6237e176-5050-4ff8-9342-6760201f93b6
+api1          | 2025-08-07T09:10:41.122Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6237e176-5050-4ff8-9342-6760201f93b6 received successfully
+api1          | 2025-08-07T09:10:41.123Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.196Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ad626ee9-e622-459a-8482-feaf799e6f47
+api2          | 2025-08-07T09:10:41.196Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ad626ee9-e622-459a-8482-feaf799e6f47 received successfully
+api2          | 2025-08-07T09:10:41.197Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.214Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0d79f3b3-3b98-47e0-8f5f-b41ecf90b16e
+api1          | 2025-08-07T09:10:41.214Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0d79f3b3-3b98-47e0-8f5f-b41ecf90b16e received successfully
+api1          | 2025-08-07T09:10:41.214Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.231Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c2933e35-f1f8-405c-aeb1-a5a76a59ed5f
+api2          | 2025-08-07T09:10:41.232Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c2933e35-f1f8-405c-aeb1-a5a76a59ed5f received successfully
+api2          | 2025-08-07T09:10:41.232Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.304Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2b196bb5-bcfd-41c0-980d-3976abe2a17f
+api1          | 2025-08-07T09:10:41.305Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2b196bb5-bcfd-41c0-980d-3976abe2a17f received successfully
+api1          | 2025-08-07T09:10:41.305Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.322Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1d780889-4b42-45c2-a663-b74e87c8ee7f
+api2          | 2025-08-07T09:10:41.323Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1d780889-4b42-45c2-a663-b74e87c8ee7f received successfully
+api2          | 2025-08-07T09:10:41.323Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.340Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 89d68f42-26a4-474e-bf1e-0065fb0805aa
+api1          | 2025-08-07T09:10:41.341Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 89d68f42-26a4-474e-bf1e-0065fb0805aa received successfully
+api1          | 2025-08-07T09:10:41.342Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.413Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f67e37f8-f745-4464-94c5-1dcd503bc7cc
+api2          | 2025-08-07T09:10:41.414Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f67e37f8-f745-4464-94c5-1dcd503bc7cc received successfully
+api2          | 2025-08-07T09:10:41.415Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.431Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 480e2f14-c267-4e5f-9474-367b974ee840
+api1          | 2025-08-07T09:10:41.431Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 480e2f14-c267-4e5f-9474-367b974ee840 received successfully
+api1          | 2025-08-07T09:10:41.432Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.449Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 9bc74e00-0701-43c6-a61a-066bbf94b317
+api2          | 2025-08-07T09:10:41.450Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 9bc74e00-0701-43c6-a61a-066bbf94b317 received successfully
+api2          | 2025-08-07T09:10:41.450Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.523Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending fe06ecd6-745d-4385-99fb-7c23af670410
+api1          | 2025-08-07T09:10:41.524Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment fe06ecd6-745d-4385-99fb-7c23af670410 received successfully
+api1          | 2025-08-07T09:10:41.524Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.540Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6e1268dd-428a-4c8e-8919-30c038fdf445
+api2          | 2025-08-07T09:10:41.541Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6e1268dd-428a-4c8e-8919-30c038fdf445 received successfully
+api2          | 2025-08-07T09:10:41.542Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.559Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2d4e4c16-5de3-4b75-ba24-e2a6debd9899
+api1          | 2025-08-07T09:10:41.560Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2d4e4c16-5de3-4b75-ba24-e2a6debd9899 received successfully
+api1          | 2025-08-07T09:10:41.560Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.632Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0b4a57a6-39eb-4643-a5e8-434767edc575
+api2          | 2025-08-07T09:10:41.633Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0b4a57a6-39eb-4643-a5e8-434767edc575 received successfully
+api2          | 2025-08-07T09:10:41.634Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.650Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d71ef33f-2432-41cb-aa1d-bd38153fda25
+api1          | 2025-08-07T09:10:41.651Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d71ef33f-2432-41cb-aa1d-bd38153fda25 received successfully
+api1          | 2025-08-07T09:10:41.651Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.667Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f73ade64-cd18-4b74-8278-f2dc19033e3b
+api2          | 2025-08-07T09:10:41.668Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f73ade64-cd18-4b74-8278-f2dc19033e3b received successfully
+api2          | 2025-08-07T09:10:41.668Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.741Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a587aba0-b2e8-4b75-b912-7b6babf3f7c1
+api1          | 2025-08-07T09:10:41.742Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a587aba0-b2e8-4b75-b912-7b6babf3f7c1 received successfully
+api1          | 2025-08-07T09:10:41.742Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.760Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b1ac3098-d353-479a-99c2-8fce5f5b1807
+api2          | 2025-08-07T09:10:41.761Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b1ac3098-d353-479a-99c2-8fce5f5b1807 received successfully
+api2          | 2025-08-07T09:10:41.761Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.777Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3987565b-b567-4698-86a5-468a7ae11cd8
+api1          | 2025-08-07T09:10:41.778Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3987565b-b567-4698-86a5-468a7ae11cd8 received successfully
+api1          | 2025-08-07T09:10:41.778Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.851Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b0458908-2843-4581-ac07-391afd642201
+api2          | 2025-08-07T09:10:41.852Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b0458908-2843-4581-ac07-391afd642201 received successfully
+api2          | 2025-08-07T09:10:41.852Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.874Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1f4270b2-3c9d-4345-889f-7cc709d5f873
+api1          | 2025-08-07T09:10:41.875Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1f4270b2-3c9d-4345-889f-7cc709d5f873 received successfully
+api1          | 2025-08-07T09:10:41.875Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.887Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 61dd207b-e466-4882-bd5d-c48173081644
+api2          | 2025-08-07T09:10:41.888Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 61dd207b-e466-4882-bd5d-c48173081644 received successfully
+api2          | 2025-08-07T09:10:41.888Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.908Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d9545a29-843d-477c-9818-3027a2dc4696
+api1          | 2025-08-07T09:10:41.909Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d9545a29-843d-477c-9818-3027a2dc4696 received successfully
+api1          | 2025-08-07T09:10:41.909Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.959Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0ed81ef8-d84f-4c52-abb3-e4100e34c650
+api2          | 2025-08-07T09:10:41.960Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0ed81ef8-d84f-4c52-abb3-e4100e34c650 received successfully
+api2          | 2025-08-07T09:10:41.961Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:41.979Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 683a4b15-92c6-46ea-8c15-50ee6dc61dc2
+api1          | 2025-08-07T09:10:41.979Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 683a4b15-92c6-46ea-8c15-50ee6dc61dc2 received successfully
+api1          | 2025-08-07T09:10:41.979Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:41.996Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d13a1208-d713-4bc4-8c4f-1b65c9a8a865
+api2          | 2025-08-07T09:10:41.996Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d13a1208-d713-4bc4-8c4f-1b65c9a8a865 received successfully
+api2          | 2025-08-07T09:10:41.996Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.014Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 70dc845f-f6f7-4506-af38-030c418c4f38
+api1          | 2025-08-07T09:10:42.014Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 70dc845f-f6f7-4506-af38-030c418c4f38 received successfully
+api1          | 2025-08-07T09:10:42.014Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.069Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6e499c29-9f6b-4b11-a5d8-75f621053eae
+api2          | 2025-08-07T09:10:42.070Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6e499c29-9f6b-4b11-a5d8-75f621053eae received successfully
+api2          | 2025-08-07T09:10:42.071Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.087Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b297548f-ffc0-40fa-a355-102e5bf8f891
+api1          | 2025-08-07T09:10:42.087Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b297548f-ffc0-40fa-a355-102e5bf8f891 received successfully
+api1          | 2025-08-07T09:10:42.088Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.105Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 18f71fd3-103a-44f1-936c-2856a61f7c1d
+api2          | 2025-08-07T09:10:42.105Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 18f71fd3-103a-44f1-936c-2856a61f7c1d received successfully
+api2          | 2025-08-07T09:10:42.106Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.123Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 98af459c-975c-46c6-8381-b6e1518fd18a
+api1          | 2025-08-07T09:10:42.123Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 98af459c-975c-46c6-8381-b6e1518fd18a received successfully
+api1          | 2025-08-07T09:10:42.124Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.179Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a18a2a2f-3016-498d-b5f1-22af7dade06e
+api2          | 2025-08-07T09:10:42.180Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a18a2a2f-3016-498d-b5f1-22af7dade06e received successfully
+api2          | 2025-08-07T09:10:42.180Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.197Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6333aae4-caa2-4793-9ba0-14197e81a13e
+api1          | 2025-08-07T09:10:42.198Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6333aae4-caa2-4793-9ba0-14197e81a13e received successfully
+api1          | 2025-08-07T09:10:42.198Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.215Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f9d51f10-6ba9-4835-8230-f8dd9eb8bd68
+api2          | 2025-08-07T09:10:42.216Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f9d51f10-6ba9-4835-8230-f8dd9eb8bd68 received successfully
+api2          | 2025-08-07T09:10:42.216Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.232Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 74eded85-fefd-4ae9-b83b-a7ba8c3b88a7
+api1          | 2025-08-07T09:10:42.233Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 74eded85-fefd-4ae9-b83b-a7ba8c3b88a7 received successfully
+api1          | 2025-08-07T09:10:42.233Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.288Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2135ec6b-9d9b-4ab7-9282-6f7d46534373
+api2          | 2025-08-07T09:10:42.289Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2135ec6b-9d9b-4ab7-9282-6f7d46534373 received successfully
+api2          | 2025-08-07T09:10:42.289Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.306Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 41342e39-1abf-42e5-a549-9b3d7641d6b2
+api1          | 2025-08-07T09:10:42.307Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 41342e39-1abf-42e5-a549-9b3d7641d6b2 received successfully
+api1          | 2025-08-07T09:10:42.307Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.324Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0af3126f-0eb6-4b39-9329-f15943ff17dc
+api2          | 2025-08-07T09:10:42.325Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0af3126f-0eb6-4b39-9329-f15943ff17dc received successfully
+api2          | 2025-08-07T09:10:42.325Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.342Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 71d171be-c339-430e-82eb-9d42fa9ff3eb
+api1          | 2025-08-07T09:10:42.343Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 71d171be-c339-430e-82eb-9d42fa9ff3eb received successfully
+api1          | 2025-08-07T09:10:42.343Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.397Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 01b5ef3b-58ec-4999-b363-38b7853b4f30
+api2          | 2025-08-07T09:10:42.398Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 01b5ef3b-58ec-4999-b363-38b7853b4f30 received successfully
+api2          | 2025-08-07T09:10:42.409Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.415Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 09954553-e785-498d-8953-101a17f266f0
+api1          | 2025-08-07T09:10:42.416Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 09954553-e785-498d-8953-101a17f266f0 received successfully
+api1          | 2025-08-07T09:10:42.416Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.432Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 21c39b0b-b23b-4522-8d98-e951a4351c2d
+api2          | 2025-08-07T09:10:42.433Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 21c39b0b-b23b-4522-8d98-e951a4351c2d received successfully
+api2          | 2025-08-07T09:10:42.433Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.450Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f58eb858-7ecd-4e4f-893b-fc0006318a9d
+api1          | 2025-08-07T09:10:42.451Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f58eb858-7ecd-4e4f-893b-fc0006318a9d received successfully
+api1          | 2025-08-07T09:10:42.451Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.506Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 35edbdde-a932-4788-890b-2dd1b2c38d1a
+api2          | 2025-08-07T09:10:42.507Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 35edbdde-a932-4788-890b-2dd1b2c38d1a received successfully
+api2          | 2025-08-07T09:10:42.507Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.524Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c83de142-ec27-48bd-a959-acc89fa62695
+api1          | 2025-08-07T09:10:42.525Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c83de142-ec27-48bd-a959-acc89fa62695 received successfully
+api1          | 2025-08-07T09:10:42.525Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.541Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a66aadd9-127c-4530-a8f9-7512da5f43a7
+api2          | 2025-08-07T09:10:42.542Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a66aadd9-127c-4530-a8f9-7512da5f43a7 received successfully
+api2          | 2025-08-07T09:10:42.542Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.561Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 00187576-31d8-4299-8bf2-9bfbbf7a7dc8
+api1          | 2025-08-07T09:10:42.562Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 00187576-31d8-4299-8bf2-9bfbbf7a7dc8 received successfully
+api1          | 2025-08-07T09:10:42.562Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.615Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b03223b6-807e-4e84-91b9-8d7125479536
+api2          | 2025-08-07T09:10:42.616Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b03223b6-807e-4e84-91b9-8d7125479536 received successfully
+api2          | 2025-08-07T09:10:42.616Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.634Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 54c92268-1bc9-4a7e-8ffc-690eb2dbaaf4
+api1          | 2025-08-07T09:10:42.635Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 54c92268-1bc9-4a7e-8ffc-690eb2dbaaf4 received successfully
+api1          | 2025-08-07T09:10:42.635Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.652Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8edf86b7-2701-4c41-ac67-d27160ec8b15
+api2          | 2025-08-07T09:10:42.653Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8edf86b7-2701-4c41-ac67-d27160ec8b15 received successfully
+api2          | 2025-08-07T09:10:42.653Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.668Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c98b87ce-cabf-4437-a727-8aa6a8ed08f3
+api1          | 2025-08-07T09:10:42.669Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c98b87ce-cabf-4437-a727-8aa6a8ed08f3 received successfully
+api1          | 2025-08-07T09:10:42.669Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.724Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6eb715cf-678d-4a4d-9377-82c84a854751
+api2          | 2025-08-07T09:10:42.725Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6eb715cf-678d-4a4d-9377-82c84a854751 received successfully
+api2          | 2025-08-07T09:10:42.726Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.743Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 395d04ae-57a1-4175-8fd3-fe02b172e596
+api1          | 2025-08-07T09:10:42.744Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 395d04ae-57a1-4175-8fd3-fe02b172e596 received successfully
+api1          | 2025-08-07T09:10:42.744Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.762Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending afdb21b3-d25b-4a23-8da6-9d7b195340d3
+api2          | 2025-08-07T09:10:42.763Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment afdb21b3-d25b-4a23-8da6-9d7b195340d3 received successfully
+api2          | 2025-08-07T09:10:42.763Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.779Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5b506e0d-3780-4454-8f56-e7c1742def11
+api1          | 2025-08-07T09:10:42.780Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5b506e0d-3780-4454-8f56-e7c1742def11 received successfully
+api1          | 2025-08-07T09:10:42.780Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.834Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7509cc00-84f4-41c5-a4ba-5cddc23db23e
+api2          | 2025-08-07T09:10:42.835Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7509cc00-84f4-41c5-a4ba-5cddc23db23e received successfully
+api2          | 2025-08-07T09:10:42.836Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.852Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f4caf9a2-451b-4df6-8457-0bee2bf3fc4a
+api1          | 2025-08-07T09:10:42.853Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f4caf9a2-451b-4df6-8457-0bee2bf3fc4a received successfully
+api1          | 2025-08-07T09:10:42.853Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.876Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 856574b8-94f2-4581-8fb8-dd542100b30c
+api2          | 2025-08-07T09:10:42.877Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 856574b8-94f2-4581-8fb8-dd542100b30c received successfully
+api2          | 2025-08-07T09:10:42.877Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.888Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7cda8d86-8fe6-4288-8f4f-cf1feff91c3a
+api1          | 2025-08-07T09:10:42.889Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7cda8d86-8fe6-4288-8f4f-cf1feff91c3a received successfully
+api1          | 2025-08-07T09:10:42.889Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.910Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3b3d3034-f9d6-4c7d-8221-dbbc86fb6784
+api2          | 2025-08-07T09:10:42.911Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3b3d3034-f9d6-4c7d-8221-dbbc86fb6784 received successfully
+api2          | 2025-08-07T09:10:42.911Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.943Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6e092549-1200-4ae3-87dd-a3ff61c754ee
+api1          | 2025-08-07T09:10:42.944Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6e092549-1200-4ae3-87dd-a3ff61c754ee received successfully
+api1          | 2025-08-07T09:10:42.944Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.961Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1f008909-4a58-4356-9003-da0e89ffdacc
+api2          | 2025-08-07T09:10:42.962Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1f008909-4a58-4356-9003-da0e89ffdacc received successfully
+api2          | 2025-08-07T09:10:42.962Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:42.980Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c4fce115-0c33-44ee-a31d-20f7e13a2721
+api1          | 2025-08-07T09:10:42.981Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c4fce115-0c33-44ee-a31d-20f7e13a2721 received successfully
+api1          | 2025-08-07T09:10:42.981Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:42.998Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1ca4d657-6b7d-47a0-bf9e-a72fbb8c9000
+api2          | 2025-08-07T09:10:42.998Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1ca4d657-6b7d-47a0-bf9e-a72fbb8c9000 received successfully
+api2          | 2025-08-07T09:10:42.999Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.015Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6a0167e1-67a1-4a75-9b71-7e6d7e35b6ae
+api1          | 2025-08-07T09:10:43.015Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6a0167e1-67a1-4a75-9b71-7e6d7e35b6ae received successfully
+api1          | 2025-08-07T09:10:43.016Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.053Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b9bc8db3-2f21-44c1-93c0-89e5d735cc25
+api2          | 2025-08-07T09:10:43.054Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b9bc8db3-2f21-44c1-93c0-89e5d735cc25 received successfully
+api2          | 2025-08-07T09:10:43.054Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.071Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 79446eec-204e-4916-8eaa-ffdcecf1a1fc
+api1          | 2025-08-07T09:10:43.071Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 79446eec-204e-4916-8eaa-ffdcecf1a1fc received successfully
+api1          | 2025-08-07T09:10:43.072Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.088Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1b2d2d65-8b5c-4269-aa77-898e89baa6c2
+api2          | 2025-08-07T09:10:43.088Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1b2d2d65-8b5c-4269-aa77-898e89baa6c2 received successfully
+api2          | 2025-08-07T09:10:43.089Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.106Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d887b87c-6885-4ec9-9a89-ad62792cf3f5
+api1          | 2025-08-07T09:10:43.107Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d887b87c-6885-4ec9-9a89-ad62792cf3f5 received successfully
+api1          | 2025-08-07T09:10:43.107Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.124Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a0818fcc-e239-4998-9441-888f8c4e84f2
+api2          | 2025-08-07T09:10:43.125Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a0818fcc-e239-4998-9441-888f8c4e84f2 received successfully
+api2          | 2025-08-07T09:10:43.125Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.179Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7ab34b39-161d-4178-a466-b6cdfc2e517b
+api2          | 2025-08-07T09:10:43.180Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 08862a5d-06f0-4678-b9eb-cd9964cac6d8
+api1          | 2025-08-07T09:10:43.180Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7ab34b39-161d-4178-a466-b6cdfc2e517b received successfully
+api1          | 2025-08-07T09:10:43.180Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.181Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 08862a5d-06f0-4678-b9eb-cd9964cac6d8 received successfully
+api2          | 2025-08-07T09:10:43.181Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.198Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 33dccbda-9232-4bb1-b1f5-d1e68b73a72d
+api1          | 2025-08-07T09:10:43.199Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 33dccbda-9232-4bb1-b1f5-d1e68b73a72d received successfully
+api1          | 2025-08-07T09:10:43.199Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.217Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b375ed8f-61a9-47df-86da-d7a1248b2aea
+api2          | 2025-08-07T09:10:43.218Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b375ed8f-61a9-47df-86da-d7a1248b2aea received successfully
+api2          | 2025-08-07T09:10:43.218Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.234Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 596e566b-32ab-49b4-b7c4-3b498f4f5684
+api1          | 2025-08-07T09:10:43.235Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 596e566b-32ab-49b4-b7c4-3b498f4f5684 received successfully
+api1          | 2025-08-07T09:10:43.235Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.271Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f30086e1-eef9-4794-ba11-e4cfa004dff3
+api2          | 2025-08-07T09:10:43.272Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f30086e1-eef9-4794-ba11-e4cfa004dff3 received successfully
+api2          | 2025-08-07T09:10:43.272Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.290Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e42db437-583b-4186-989e-ca2d5bf8e2db
+api1          | 2025-08-07T09:10:43.291Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e42db437-583b-4186-989e-ca2d5bf8e2db received successfully
+api1          | 2025-08-07T09:10:43.291Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.307Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending fc68e55d-1c06-4df0-9fd5-5e22db9db216
+api2          | 2025-08-07T09:10:43.308Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment fc68e55d-1c06-4df0-9fd5-5e22db9db216 received successfully
+api2          | 2025-08-07T09:10:43.308Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.325Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2a3d3b6a-edd3-4d3c-a254-4855134a58fd
+api1          | 2025-08-07T09:10:43.326Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2a3d3b6a-edd3-4d3c-a254-4855134a58fd received successfully
+api1          | 2025-08-07T09:10:43.326Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.344Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 9781db39-31c3-4cce-8740-42e320c4a170
+api2          | 2025-08-07T09:10:43.345Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 9781db39-31c3-4cce-8740-42e320c4a170 received successfully
+api2          | 2025-08-07T09:10:43.345Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.381Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending cc2d3f16-2174-4b0f-8c5e-0e00c1620ee7
+api1          | 2025-08-07T09:10:43.382Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment cc2d3f16-2174-4b0f-8c5e-0e00c1620ee7 received successfully
+api1          | 2025-08-07T09:10:43.382Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.398Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 316d60f3-3217-4927-9067-1a242468b1f6
+api2          | 2025-08-07T09:10:43.398Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 316d60f3-3217-4927-9067-1a242468b1f6 received successfully
+api2          | 2025-08-07T09:10:43.399Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.417Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8ebfab95-2b42-46e3-b6d2-1e2297889a85
+api1          | 2025-08-07T09:10:43.418Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8ebfab95-2b42-46e3-b6d2-1e2297889a85 received successfully
+api1          | 2025-08-07T09:10:43.418Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.433Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 61ef759b-51b9-4e74-987b-83ee9f4dd48c
+api2          | 2025-08-07T09:10:43.434Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 61ef759b-51b9-4e74-987b-83ee9f4dd48c received successfully
+api2          | 2025-08-07T09:10:43.434Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.452Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c6ba50e4-762b-4c22-a11b-39e409819df7
+api1          | 2025-08-07T09:10:43.453Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c6ba50e4-762b-4c22-a11b-39e409819df7 received successfully
+api1          | 2025-08-07T09:10:43.453Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.490Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1d7e860c-f321-4565-8900-60da606aed04
+api2          | 2025-08-07T09:10:43.491Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1d7e860c-f321-4565-8900-60da606aed04 received successfully
+api2          | 2025-08-07T09:10:43.491Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.508Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 11a8a438-2331-44d0-9a76-5f76ed3b1227
+api1          | 2025-08-07T09:10:43.508Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 11a8a438-2331-44d0-9a76-5f76ed3b1227 received successfully
+api1          | 2025-08-07T09:10:43.509Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.526Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5b1412a9-5944-403d-b6f3-358c0a7e6521
+api2          | 2025-08-07T09:10:43.527Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5b1412a9-5944-403d-b6f3-358c0a7e6521 received successfully
+api2          | 2025-08-07T09:10:43.527Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.543Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1161d13e-5c79-4191-b7a2-c6eebfa149fb
+api1          | 2025-08-07T09:10:43.544Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1161d13e-5c79-4191-b7a2-c6eebfa149fb received successfully
+api1          | 2025-08-07T09:10:43.545Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.563Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5cc3b8e9-6656-40f5-a998-3748720beba0
+api2          | 2025-08-07T09:10:43.564Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5cc3b8e9-6656-40f5-a998-3748720beba0 received successfully
+api2          | 2025-08-07T09:10:43.564Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.599Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e6686248-9954-40c1-8f40-2109e462a140
+api1          | 2025-08-07T09:10:43.600Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e6686248-9954-40c1-8f40-2109e462a140 received successfully
+api1          | 2025-08-07T09:10:43.600Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.617Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending db2f27af-93bb-4340-99ce-1cc7c8ea6623
+api2          | 2025-08-07T09:10:43.618Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment db2f27af-93bb-4340-99ce-1cc7c8ea6623 received successfully
+api2          | 2025-08-07T09:10:43.618Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.636Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4c770e68-9a09-4d26-a17e-45ca09db04ad
+api1          | 2025-08-07T09:10:43.637Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4c770e68-9a09-4d26-a17e-45ca09db04ad received successfully
+api1          | 2025-08-07T09:10:43.637Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.654Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8559742a-f982-49a4-9817-30513b9e6728
+api2          | 2025-08-07T09:10:43.655Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8559742a-f982-49a4-9817-30513b9e6728 received successfully
+api2          | 2025-08-07T09:10:43.656Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.670Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 422cca41-cf2d-4008-9c23-7e87019a3117
+api1          | 2025-08-07T09:10:43.671Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 422cca41-cf2d-4008-9c23-7e87019a3117 received successfully
+api1          | 2025-08-07T09:10:43.671Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.708Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4fb0e597-ab27-4f2f-9aa4-d83609c217a0
+api2          | 2025-08-07T09:10:43.709Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4fb0e597-ab27-4f2f-9aa4-d83609c217a0 received successfully
+api2          | 2025-08-07T09:10:43.710Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.726Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ee206402-6ca1-4224-b21e-2d975b8ea916
+api1          | 2025-08-07T09:10:43.727Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ee206402-6ca1-4224-b21e-2d975b8ea916 received successfully
+api1          | 2025-08-07T09:10:43.727Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.745Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending fe8d793b-f713-42ad-bde8-7d0eda073265
+api2          | 2025-08-07T09:10:43.745Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment fe8d793b-f713-42ad-bde8-7d0eda073265 received successfully
+api2          | 2025-08-07T09:10:43.746Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.764Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6d9ed844-611c-42f9-bbea-d550d6da4c8e
+api1          | 2025-08-07T09:10:43.764Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6d9ed844-611c-42f9-bbea-d550d6da4c8e received successfully
+api1          | 2025-08-07T09:10:43.765Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.781Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b714db42-7569-4e31-bab0-00d6d3416afe
+api2          | 2025-08-07T09:10:43.782Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b714db42-7569-4e31-bab0-00d6d3416afe received successfully
+api2          | 2025-08-07T09:10:43.782Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.818Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 72be1784-f5e9-4fd6-bd00-ac5bf43fd547
+api1          | 2025-08-07T09:10:43.818Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 72be1784-f5e9-4fd6-bd00-ac5bf43fd547 received successfully
+api1          | 2025-08-07T09:10:43.819Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.836Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a5de5afc-628f-499f-a74f-fed48b412c3b
+api2          | 2025-08-07T09:10:43.837Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a5de5afc-628f-499f-a74f-fed48b412c3b received successfully
+api2          | 2025-08-07T09:10:43.837Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.854Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending fbd8e508-4b51-4008-9e66-97c1b6c48852
+api1          | 2025-08-07T09:10:43.855Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment fbd8e508-4b51-4008-9e66-97c1b6c48852 received successfully
+api1          | 2025-08-07T09:10:43.855Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.878Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3c299724-6106-4b05-9e88-d0a257e49b36
+api2          | 2025-08-07T09:10:43.879Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3c299724-6106-4b05-9e88-d0a257e49b36 received successfully
+api2          | 2025-08-07T09:10:43.880Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.889Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 15fcb946-8b73-4a7a-999e-98d1ea1430d4
+api1          | 2025-08-07T09:10:43.890Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 15fcb946-8b73-4a7a-999e-98d1ea1430d4 received successfully
+api1          | 2025-08-07T09:10:43.890Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.912Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5314eeeb-170c-44cc-adb1-120997655f1b
+api2          | 2025-08-07T09:10:43.913Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5314eeeb-170c-44cc-adb1-120997655f1b received successfully
+api2          | 2025-08-07T09:10:43.913Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.927Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c06b8f0b-7def-4742-b64c-e8540da49ded
+api1          | 2025-08-07T09:10:43.927Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c06b8f0b-7def-4742-b64c-e8540da49ded received successfully
+api1          | 2025-08-07T09:10:43.928Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.945Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a3cf9ac5-31c8-4568-87a8-bbcbdd267b3d
+api2          | 2025-08-07T09:10:43.946Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a3cf9ac5-31c8-4568-87a8-bbcbdd267b3d received successfully
+api2          | 2025-08-07T09:10:43.946Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.963Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 880dcad5-3670-4aaf-ae73-61e459fd64c0
+api1          | 2025-08-07T09:10:43.964Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 880dcad5-3670-4aaf-ae73-61e459fd64c0 received successfully
+api1          | 2025-08-07T09:10:43.964Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:43.982Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2d093987-9ba5-4e2d-a7e9-fa75b17abac5
+api2          | 2025-08-07T09:10:43.983Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2d093987-9ba5-4e2d-a7e9-fa75b17abac5 received successfully
+api2          | 2025-08-07T09:10:43.983Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:43.999Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 17658a9b-2141-44e0-b97a-497b8790f7c2
+api1          | 2025-08-07T09:10:44.000Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 17658a9b-2141-44e0-b97a-497b8790f7c2 received successfully
+api1          | 2025-08-07T09:10:44.000Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.017Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d083b99d-ea2f-41e9-8e41-3b743c4706b9
+api2          | 2025-08-07T09:10:44.017Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d083b99d-ea2f-41e9-8e41-3b743c4706b9 received successfully
+api2          | 2025-08-07T09:10:44.018Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.036Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 29f14793-4b09-4dd9-a76a-bf8af3bb0a1f
+api1          | 2025-08-07T09:10:44.037Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 29f14793-4b09-4dd9-a76a-bf8af3bb0a1f received successfully
+api1          | 2025-08-07T09:10:44.037Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.054Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending eeb6e3e3-ae10-4d7d-bcac-8d2f6c51a587
+api2          | 2025-08-07T09:10:44.055Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment eeb6e3e3-ae10-4d7d-bcac-8d2f6c51a587 received successfully
+api2          | 2025-08-07T09:10:44.055Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.072Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ae9e0a0e-54d5-4d1e-9a0c-2525a84b76bf
+api1          | 2025-08-07T09:10:44.073Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ae9e0a0e-54d5-4d1e-9a0c-2525a84b76bf received successfully
+api1          | 2025-08-07T09:10:44.073Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.089Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4d049324-5f81-49e4-be46-7036689caafd
+api2          | 2025-08-07T09:10:44.090Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4d049324-5f81-49e4-be46-7036689caafd received successfully
+api2          | 2025-08-07T09:10:44.090Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.107Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d407ea44-5574-4147-be49-1481ac18be7f
+api1          | 2025-08-07T09:10:44.108Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d407ea44-5574-4147-be49-1481ac18be7f received successfully
+api1          | 2025-08-07T09:10:44.108Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.125Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 04da4c3e-b0b6-4832-854e-45ac31eaae41
+api2          | 2025-08-07T09:10:44.126Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 04da4c3e-b0b6-4832-854e-45ac31eaae41 received successfully
+api2          | 2025-08-07T09:10:44.126Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.145Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 445521ee-1bb9-4b96-bd2f-e278810b8a74
+api1          | 2025-08-07T09:10:44.146Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 445521ee-1bb9-4b96-bd2f-e278810b8a74 received successfully
+api1          | 2025-08-07T09:10:44.146Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.180Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ded83e64-6d34-42c6-969a-32c0d16b9e44
+api1          | 2025-08-07T09:10:44.181Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e7be6a22-1ba1-4fa5-ae7a-2287f497baff
+api2          | 2025-08-07T09:10:44.181Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ded83e64-6d34-42c6-969a-32c0d16b9e44 received successfully
+api2          | 2025-08-07T09:10:44.181Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.182Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e7be6a22-1ba1-4fa5-ae7a-2287f497baff received successfully
+api1          | 2025-08-07T09:10:44.182Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.199Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3e00f737-a4a8-4d21-beb7-da331ec722bd
+api2          | 2025-08-07T09:10:44.200Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3e00f737-a4a8-4d21-beb7-da331ec722bd received successfully
+api2          | 2025-08-07T09:10:44.200Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.218Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3c0cdb0a-302a-43d9-907e-70f609898b53
+api1          | 2025-08-07T09:10:44.219Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3c0cdb0a-302a-43d9-907e-70f609898b53 received successfully
+api1          | 2025-08-07T09:10:44.219Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.235Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e2a5c47e-857e-415a-959f-f029dab380db
+api2          | 2025-08-07T09:10:44.236Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e2a5c47e-857e-415a-959f-f029dab380db received successfully
+api2          | 2025-08-07T09:10:44.236Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.255Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 39f6e7ea-640e-4a0d-9599-4896523cddb6
+api1          | 2025-08-07T09:10:44.256Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 39f6e7ea-640e-4a0d-9599-4896523cddb6 received successfully
+api1          | 2025-08-07T09:10:44.256Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.272Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6f491df0-27f3-4e88-9cef-3e5eea6dcac2
+api2          | 2025-08-07T09:10:44.273Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6f491df0-27f3-4e88-9cef-3e5eea6dcac2 received successfully
+api2          | 2025-08-07T09:10:44.273Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.291Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 64045655-25f7-4189-87dd-ca54a621c79a
+api1          | 2025-08-07T09:10:44.292Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 64045655-25f7-4189-87dd-ca54a621c79a received successfully
+api1          | 2025-08-07T09:10:44.292Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.308Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3cd95a97-1f12-4175-a43b-4a83b7eaccf0
+api2          | 2025-08-07T09:10:44.309Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3cd95a97-1f12-4175-a43b-4a83b7eaccf0 received successfully
+api2          | 2025-08-07T09:10:44.309Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.327Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 46026b6c-0547-4689-b26f-499f3ee51c81
+api1          | 2025-08-07T09:10:44.328Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 46026b6c-0547-4689-b26f-499f3ee51c81 received successfully
+api1          | 2025-08-07T09:10:44.328Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.346Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 36532c42-29a0-459f-8158-6b0ae0c4ce36
+api2          | 2025-08-07T09:10:44.347Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 36532c42-29a0-459f-8158-6b0ae0c4ce36 received successfully
+api2          | 2025-08-07T09:10:44.347Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.364Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 88734194-dbe0-42e8-8fae-691e6f80883d
+api1          | 2025-08-07T09:10:44.365Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 88734194-dbe0-42e8-8fae-691e6f80883d received successfully
+api1          | 2025-08-07T09:10:44.365Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.382Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 845b17d2-57b1-4028-becd-a0a5027ac364
+api2          | 2025-08-07T09:10:44.383Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 845b17d2-57b1-4028-becd-a0a5027ac364 received successfully
+api2          | 2025-08-07T09:10:44.383Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.399Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a09c024c-d048-4f07-bc35-e1a0d0f00be8
+api1          | 2025-08-07T09:10:44.400Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a09c024c-d048-4f07-bc35-e1a0d0f00be8 received successfully
+api1          | 2025-08-07T09:10:44.400Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.418Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 828bbed9-0d8e-4727-b0ef-8b651f6972a6
+api2          | 2025-08-07T09:10:44.419Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 828bbed9-0d8e-4727-b0ef-8b651f6972a6 received successfully
+api2          | 2025-08-07T09:10:44.419Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.434Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0960ef58-ff22-4d79-9c76-909b31dbea8a
+api1          | 2025-08-07T09:10:44.435Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0960ef58-ff22-4d79-9c76-909b31dbea8a received successfully
+api1          | 2025-08-07T09:10:44.435Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.453Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7d9403e7-5e18-4a14-bbe3-4efeb30c8ae3
+api2          | 2025-08-07T09:10:44.454Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7d9403e7-5e18-4a14-bbe3-4efeb30c8ae3 received successfully
+api2          | 2025-08-07T09:10:44.455Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.473Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e01fb9cc-7a70-4c74-acf2-6cc9fc2f50e5
+api1          | 2025-08-07T09:10:44.474Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e01fb9cc-7a70-4c74-acf2-6cc9fc2f50e5 received successfully
+api1          | 2025-08-07T09:10:44.474Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.491Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 64dd1718-b6b9-43d5-9fef-525c3351491f
+api2          | 2025-08-07T09:10:44.492Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 64dd1718-b6b9-43d5-9fef-525c3351491f received successfully
+api2          | 2025-08-07T09:10:44.492Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.509Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 01ddfafa-f7a4-4d96-8768-d88854564c15
+api1          | 2025-08-07T09:10:44.510Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 01ddfafa-f7a4-4d96-8768-d88854564c15 received successfully
+api1          | 2025-08-07T09:10:44.510Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.527Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f86a0bfe-c87b-44a1-a498-35aba42ae7a5
+api2          | 2025-08-07T09:10:44.528Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f86a0bfe-c87b-44a1-a498-35aba42ae7a5 received successfully
+api2          | 2025-08-07T09:10:44.528Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.545Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3d8080d3-a23e-410d-9dd7-ab56d952bbdd
+api1          | 2025-08-07T09:10:44.546Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3d8080d3-a23e-410d-9dd7-ab56d952bbdd received successfully
+api1          | 2025-08-07T09:10:44.546Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.564Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 62fe2adf-a2c6-42b4-8347-e4dce5b2f087
+api2          | 2025-08-07T09:10:44.565Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 62fe2adf-a2c6-42b4-8347-e4dce5b2f087 received successfully
+api2          | 2025-08-07T09:10:44.565Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.582Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 50c25e8a-4726-4a95-8053-eb7ebd4cf804
+api1          | 2025-08-07T09:10:44.583Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 50c25e8a-4726-4a95-8053-eb7ebd4cf804 received successfully
+api1          | 2025-08-07T09:10:44.583Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.600Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending cd025f80-8230-41ab-b479-5b592a94dae4
+api2          | 2025-08-07T09:10:44.601Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment cd025f80-8230-41ab-b479-5b592a94dae4 received successfully
+api2          | 2025-08-07T09:10:44.601Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.618Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e81ee352-a275-44fa-90b2-115c4355fd7e
+api1          | 2025-08-07T09:10:44.619Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e81ee352-a275-44fa-90b2-115c4355fd7e received successfully
+api1          | 2025-08-07T09:10:44.619Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.637Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ac2e39e1-6588-469b-b99d-310605ac21bd
+api2          | 2025-08-07T09:10:44.638Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ac2e39e1-6588-469b-b99d-310605ac21bd received successfully
+api2          | 2025-08-07T09:10:44.639Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.656Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1b1fe4ab-224c-4294-ac87-d1459b8de344
+api1          | 2025-08-07T09:10:44.656Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1b1fe4ab-224c-4294-ac87-d1459b8de344 received successfully
+api1          | 2025-08-07T09:10:44.657Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.672Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 89ae2664-5d97-4266-84a0-682aa97a332d
+api2          | 2025-08-07T09:10:44.673Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 89ae2664-5d97-4266-84a0-682aa97a332d received successfully
+api2          | 2025-08-07T09:10:44.673Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.692Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 58f4f95c-ed13-43d4-a4b4-0c3a8164ba81
+api1          | 2025-08-07T09:10:44.693Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 58f4f95c-ed13-43d4-a4b4-0c3a8164ba81 received successfully
+api1          | 2025-08-07T09:10:44.693Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.710Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ace61fbb-bfae-4d65-b716-2f23ec952045
+api2          | 2025-08-07T09:10:44.711Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ace61fbb-bfae-4d65-b716-2f23ec952045 received successfully
+api2          | 2025-08-07T09:10:44.711Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.728Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7b9bfc50-518f-4932-9504-63b8defbb797
+api1          | 2025-08-07T09:10:44.729Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7b9bfc50-518f-4932-9504-63b8defbb797 received successfully
+api1          | 2025-08-07T09:10:44.729Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.746Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3d63bf92-b154-4108-b4bf-5309a39253f1
+api2          | 2025-08-07T09:10:44.747Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3d63bf92-b154-4108-b4bf-5309a39253f1 received successfully
+api2          | 2025-08-07T09:10:44.747Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.765Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b24857fd-b85e-4bad-b947-82f9dbaa18b4
+api1          | 2025-08-07T09:10:44.766Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b24857fd-b85e-4bad-b947-82f9dbaa18b4 received successfully
+api1          | 2025-08-07T09:10:44.766Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.783Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ae9afc97-eba1-48ca-ade2-59667150e9b9
+api2          | 2025-08-07T09:10:44.783Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ae9afc97-eba1-48ca-ade2-59667150e9b9 received successfully
+api2          | 2025-08-07T09:10:44.783Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.801Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 52c732bf-0bbf-41ed-b1ac-aac872e5dee4
+api1          | 2025-08-07T09:10:44.802Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 52c732bf-0bbf-41ed-b1ac-aac872e5dee4 received successfully
+api1          | 2025-08-07T09:10:44.802Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.819Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f24bdb44-d7e8-4e80-ac95-eee9f28e6c6b
+api2          | 2025-08-07T09:10:44.820Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f24bdb44-d7e8-4e80-ac95-eee9f28e6c6b received successfully
+api2          | 2025-08-07T09:10:44.820Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.838Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5feb159a-bdd9-4f7d-a0a1-ff150010d7e7
+api1          | 2025-08-07T09:10:44.838Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5feb159a-bdd9-4f7d-a0a1-ff150010d7e7 received successfully
+api1          | 2025-08-07T09:10:44.839Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.856Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8261b457-d8e3-47b5-880f-cdd8ec938a00
+api2          | 2025-08-07T09:10:44.856Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8261b457-d8e3-47b5-880f-cdd8ec938a00 received successfully
+api2          | 2025-08-07T09:10:44.856Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.880Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending efe8e2bb-2a2a-4272-929a-0661c3355575
+api1          | 2025-08-07T09:10:44.881Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment efe8e2bb-2a2a-4272-929a-0661c3355575 received successfully
+api1          | 2025-08-07T09:10:44.882Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.891Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending bb7dff36-09f1-4fbf-aca2-11ed59dffeb9
+api2          | 2025-08-07T09:10:44.892Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment bb7dff36-09f1-4fbf-aca2-11ed59dffeb9 received successfully
+api2          | 2025-08-07T09:10:44.892Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.911Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 05d475f8-bc18-4d8f-9be0-fc3f57cdb2ae
+api1          | 2025-08-07T09:10:44.911Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 05d475f8-bc18-4d8f-9be0-fc3f57cdb2ae received successfully
+api1          | 2025-08-07T09:10:44.912Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.914Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 10de06b7-bc74-4f60-b5da-5499691ad9e3
+api2          | 2025-08-07T09:10:44.914Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 10de06b7-bc74-4f60-b5da-5499691ad9e3 received successfully
+api2          | 2025-08-07T09:10:44.914Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.928Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 981eddf8-819a-4c79-9f2a-5e8d78984715
+api1          | 2025-08-07T09:10:44.928Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 981eddf8-819a-4c79-9f2a-5e8d78984715 received successfully
+api1          | 2025-08-07T09:10:44.929Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.947Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 56809f36-290d-4a5f-90fa-97d541137e1a
+api2          | 2025-08-07T09:10:44.948Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 56809f36-290d-4a5f-90fa-97d541137e1a received successfully
+api2          | 2025-08-07T09:10:44.948Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:44.964Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 74a02065-3305-4817-bd4e-b058ba8020c8
+api1          | 2025-08-07T09:10:44.965Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 74a02065-3305-4817-bd4e-b058ba8020c8 received successfully
+api1          | 2025-08-07T09:10:44.965Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:44.984Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c6aa2869-7c9e-4173-9617-52b2f486fee5
+api2          | 2025-08-07T09:10:44.985Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c6aa2869-7c9e-4173-9617-52b2f486fee5 received successfully
+api2          | 2025-08-07T09:10:44.985Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.001Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1f7ace03-3dd7-4a51-a2ff-0df6c2bdd7e5
+api1          | 2025-08-07T09:10:45.002Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1f7ace03-3dd7-4a51-a2ff-0df6c2bdd7e5 received successfully
+api1          | 2025-08-07T09:10:45.002Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.018Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 329899ee-b830-4978-bae3-681a54543018
+api2          | 2025-08-07T09:10:45.019Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 329899ee-b830-4978-bae3-681a54543018 received successfully
+api2          | 2025-08-07T09:10:45.019Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.019Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5f4d972e-d845-4045-aa70-82e0d6be6b1c
+api1          | 2025-08-07T09:10:45.020Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5f4d972e-d845-4045-aa70-82e0d6be6b1c received successfully
+api1          | 2025-08-07T09:10:45.020Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.037Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 50d3cc81-5c7a-43ce-a6cb-cfe15dcc47f8
+api2          | 2025-08-07T09:10:45.038Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 50d3cc81-5c7a-43ce-a6cb-cfe15dcc47f8 received successfully
+api2          | 2025-08-07T09:10:45.039Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.056Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending cca951e1-2c06-4c1c-97ce-d978c4a71896
+api1          | 2025-08-07T09:10:45.056Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment cca951e1-2c06-4c1c-97ce-d978c4a71896 received successfully
+api1          | 2025-08-07T09:10:45.057Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.074Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 17057727-ea9a-495d-a8ae-316a2f32ab84
+api2          | 2025-08-07T09:10:45.075Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 17057727-ea9a-495d-a8ae-316a2f32ab84 received successfully
+api2          | 2025-08-07T09:10:45.076Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.091Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d9c4f238-8c62-4a22-a7ef-b56588c50bee
+api1          | 2025-08-07T09:10:45.091Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d9c4f238-8c62-4a22-a7ef-b56588c50bee received successfully
+api1          | 2025-08-07T09:10:45.092Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.109Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 23aa153c-37bc-4bc7-8e39-316225180329
+api2          | 2025-08-07T09:10:45.109Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 23aa153c-37bc-4bc7-8e39-316225180329 received successfully
+api2          | 2025-08-07T09:10:45.110Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.127Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f048ae8c-f60d-4b47-9dd2-64adb2dc93e3
+api1          | 2025-08-07T09:10:45.127Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f048ae8c-f60d-4b47-9dd2-64adb2dc93e3 received successfully
+api1          | 2025-08-07T09:10:45.128Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.129Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending a35a86e8-886e-4757-bf45-1cbae4b2847b
+api2          | 2025-08-07T09:10:45.129Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment a35a86e8-886e-4757-bf45-1cbae4b2847b received successfully
+api2          | 2025-08-07T09:10:45.130Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.147Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1c16c27e-98be-4145-b260-53e3267b0f6a
+api1          | 2025-08-07T09:10:45.148Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1c16c27e-98be-4145-b260-53e3267b0f6a received successfully
+api1          | 2025-08-07T09:10:45.148Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.183Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7e8e4e87-d0a1-4e32-aaf9-0fd977339e97
+api1          | 2025-08-07T09:10:45.183Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 42271f8c-d31e-4a82-b260-4ca0c40c5a00
+api2          | 2025-08-07T09:10:45.184Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7e8e4e87-d0a1-4e32-aaf9-0fd977339e97 received successfully
+api2          | 2025-08-07T09:10:45.184Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.187Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 42271f8c-d31e-4a82-b260-4ca0c40c5a00 received successfully
+api1          | 2025-08-07T09:10:45.187Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.201Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 86d0bbe6-2aad-4080-986d-1d968aaf6f47
+api2          | 2025-08-07T09:10:45.201Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 86d0bbe6-2aad-4080-986d-1d968aaf6f47 received successfully
+api2          | 2025-08-07T09:10:45.202Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.220Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 714b2dab-0699-4d45-b3ed-abaf63459003
+api1          | 2025-08-07T09:10:45.221Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 714b2dab-0699-4d45-b3ed-abaf63459003 received successfully
+api1          | 2025-08-07T09:10:45.221Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.237Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7c88fb1f-f9ee-4fc9-bc71-225b7f42a161
+api1          | 2025-08-07T09:10:45.238Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 28d4945a-241a-4aaf-84cf-5e2cc1b2396e
+api2          | 2025-08-07T09:10:45.238Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7c88fb1f-f9ee-4fc9-bc71-225b7f42a161 received successfully
+api2          | 2025-08-07T09:10:45.238Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.238Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 28d4945a-241a-4aaf-84cf-5e2cc1b2396e received successfully
+api1          | 2025-08-07T09:10:45.239Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.257Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e3cd9943-c964-4ca8-a17e-f1365c4430ae
+api2          | 2025-08-07T09:10:45.257Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e3cd9943-c964-4ca8-a17e-f1365c4430ae received successfully
+api2          | 2025-08-07T09:10:45.258Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.274Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4e47936d-0819-4f31-9d0e-8bd5c87eef92
+api1          | 2025-08-07T09:10:45.274Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4e47936d-0819-4f31-9d0e-8bd5c87eef92 received successfully
+api1          | 2025-08-07T09:10:45.275Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.293Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 53a9addf-6771-45f1-939b-d8b96b916993
+api2          | 2025-08-07T09:10:45.294Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 53a9addf-6771-45f1-939b-d8b96b916993 received successfully
+api2          | 2025-08-07T09:10:45.294Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.310Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e810f318-fa41-403b-acab-b90191d2aca9
+api1          | 2025-08-07T09:10:45.310Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e810f318-fa41-403b-acab-b90191d2aca9 received successfully
+api1          | 2025-08-07T09:10:45.311Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.329Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0a094b8f-d653-4e15-98e8-9909bda09a53
+api2          | 2025-08-07T09:10:45.330Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0a094b8f-d653-4e15-98e8-9909bda09a53 received successfully
+api2          | 2025-08-07T09:10:45.330Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.347Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7468d821-7ed6-4d38-8798-961c211ff3a1
+api2          | 2025-08-07T09:10:45.347Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d4060cf1-cc61-4416-9205-f38ca42ed6ec
+api2          | 2025-08-07T09:10:45.348Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d4060cf1-cc61-4416-9205-f38ca42ed6ec received successfully
+api1          | 2025-08-07T09:10:45.348Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7468d821-7ed6-4d38-8798-961c211ff3a1 received successfully
+api2          | 2025-08-07T09:10:45.348Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.348Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.365Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 22c69655-bb06-4c45-874c-d33506786249
+api1          | 2025-08-07T09:10:45.366Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 22c69655-bb06-4c45-874c-d33506786249 received successfully
+api1          | 2025-08-07T09:10:45.366Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.383Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 841febba-9225-4360-abe3-e389292700f5
+api2          | 2025-08-07T09:10:45.384Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 841febba-9225-4360-abe3-e389292700f5 received successfully
+api2          | 2025-08-07T09:10:45.384Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.401Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 499353b1-d1b2-4730-b38d-9048b24562df
+api1          | 2025-08-07T09:10:45.401Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 499353b1-d1b2-4730-b38d-9048b24562df received successfully
+api1          | 2025-08-07T09:10:45.401Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.420Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 50ef5f0a-f7a3-414c-a56a-e0c10c692b5f
+api2          | 2025-08-07T09:10:45.420Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 50ef5f0a-f7a3-414c-a56a-e0c10c692b5f received successfully
+api2          | 2025-08-07T09:10:45.420Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.436Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ae2ce496-ffce-41b2-83ad-eb85468e20f6
+api1          | 2025-08-07T09:10:45.437Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ae2ce496-ffce-41b2-83ad-eb85468e20f6 received successfully
+api1          | 2025-08-07T09:10:45.437Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.455Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e5c6383a-b1b4-45fd-819f-d34fe46e6b87
+api2          | 2025-08-07T09:10:45.456Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e5c6383a-b1b4-45fd-819f-d34fe46e6b87 received successfully
+api2          | 2025-08-07T09:10:45.456Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.457Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 416fb69b-97c5-42c3-894a-09b3ad2ee3ea
+api1          | 2025-08-07T09:10:45.458Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 416fb69b-97c5-42c3-894a-09b3ad2ee3ea received successfully
+api1          | 2025-08-07T09:10:45.458Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.474Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8debe82e-d6bf-446f-a3fc-d569bf553a98
+api2          | 2025-08-07T09:10:45.475Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8debe82e-d6bf-446f-a3fc-d569bf553a98 received successfully
+api2          | 2025-08-07T09:10:45.475Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.493Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 0e11a547-c0fc-4e3c-81c5-d48397ecbb23
+api1          | 2025-08-07T09:10:45.494Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 0e11a547-c0fc-4e3c-81c5-d48397ecbb23 received successfully
+api1          | 2025-08-07T09:10:45.494Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.511Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 34366ab1-9134-4973-b072-2e41263b7efa
+api2          | 2025-08-07T09:10:45.512Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 34366ab1-9134-4973-b072-2e41263b7efa received successfully
+api2          | 2025-08-07T09:10:45.512Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.528Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b6955b4c-0b5c-42c0-a7ab-f91b9fb51093
+api1          | 2025-08-07T09:10:45.529Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b6955b4c-0b5c-42c0-a7ab-f91b9fb51093 received successfully
+api1          | 2025-08-07T09:10:45.529Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.547Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b76b0f2c-9195-499a-99b4-444639929e4e
+api2          | 2025-08-07T09:10:45.548Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b76b0f2c-9195-499a-99b4-444639929e4e received successfully
+api2          | 2025-08-07T09:10:45.548Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.566Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 64090198-56aa-4cf9-87d2-018fe4361b91
+api2          | 2025-08-07T09:10:45.566Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5dda7eb6-3316-421e-a1f2-bc4b1b703a6a
+api2          | 2025-08-07T09:10:45.566Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5dda7eb6-3316-421e-a1f2-bc4b1b703a6a received successfully
+api1          | 2025-08-07T09:10:45.566Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 64090198-56aa-4cf9-87d2-018fe4361b91 received successfully
+api1          | 2025-08-07T09:10:45.567Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.567Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.584Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f4a575d2-2800-4ccb-a1dc-b1ff66957dad
+api1          | 2025-08-07T09:10:45.584Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f4a575d2-2800-4ccb-a1dc-b1ff66957dad received successfully
+api1          | 2025-08-07T09:10:45.585Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.602Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2fa1b5b3-b9cf-42a2-9e0b-0ea096553e9f
+api2          | 2025-08-07T09:10:45.603Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2fa1b5b3-b9cf-42a2-9e0b-0ea096553e9f received successfully
+api2          | 2025-08-07T09:10:45.603Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.620Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1f6c3810-e2f3-45ea-ad97-7b45ef7e87f1
+api1          | 2025-08-07T09:10:45.622Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1f6c3810-e2f3-45ea-ad97-7b45ef7e87f1 received successfully
+api1          | 2025-08-07T09:10:45.622Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.639Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 48804188-bd33-4f5e-8bfc-34087cbee9f0
+api2          | 2025-08-07T09:10:45.640Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 48804188-bd33-4f5e-8bfc-34087cbee9f0 received successfully
+api2          | 2025-08-07T09:10:45.640Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.657Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 922a6e47-8118-40b5-946b-6cba42bd96f1
+api1          | 2025-08-07T09:10:45.658Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 922a6e47-8118-40b5-946b-6cba42bd96f1 received successfully
+api1          | 2025-08-07T09:10:45.658Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.674Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8f0b03c3-0aaa-4e9a-a428-e41aa2199690
+api2          | 2025-08-07T09:10:45.675Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8f0b03c3-0aaa-4e9a-a428-e41aa2199690 received successfully
+api1          | 2025-08-07T09:10:45.675Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending bb486775-7161-4935-89f9-e2f944a8e957
+api2          | 2025-08-07T09:10:45.675Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.676Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment bb486775-7161-4935-89f9-e2f944a8e957 received successfully
+api1          | 2025-08-07T09:10:45.676Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.694Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending e74f3805-f779-4b82-a966-be0cca47ca5c
+api2          | 2025-08-07T09:10:45.695Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment e74f3805-f779-4b82-a966-be0cca47ca5c received successfully
+api2          | 2025-08-07T09:10:45.695Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.712Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ea5abf00-667e-44c8-a1b1-d852919426af
+api1          | 2025-08-07T09:10:45.713Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ea5abf00-667e-44c8-a1b1-d852919426af received successfully
+api1          | 2025-08-07T09:10:45.713Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.729Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 48fbc5e5-f2f9-49db-8272-a435ba457dd6
+api2          | 2025-08-07T09:10:45.730Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 48fbc5e5-f2f9-49db-8272-a435ba457dd6 received successfully
+api2          | 2025-08-07T09:10:45.731Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.748Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 7a5a653f-5222-4c1e-99ec-3a09256e2657
+api1          | 2025-08-07T09:10:45.748Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 7a5a653f-5222-4c1e-99ec-3a09256e2657 received successfully
+api1          | 2025-08-07T09:10:45.749Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.766Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending beee9647-1066-4f0b-96e6-beded9d16947
+api2          | 2025-08-07T09:10:45.767Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment beee9647-1066-4f0b-96e6-beded9d16947 received successfully
+api2          | 2025-08-07T09:10:45.768Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.784Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 56e04eb5-b891-42f3-b15c-65c66159e6e3
+api1          | 2025-08-07T09:10:45.784Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 56e04eb5-b891-42f3-b15c-65c66159e6e3 received successfully
+api1          | 2025-08-07T09:10:45.785Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.799Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4cefed2d-6c87-4771-b77f-e3813bd595b8
+api2          | 2025-08-07T09:10:45.800Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4cefed2d-6c87-4771-b77f-e3813bd595b8 received successfully
+api2          | 2025-08-07T09:10:45.800Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.803Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending df06e65f-4505-47e4-9567-e87574b6574e
+api1          | 2025-08-07T09:10:45.804Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment df06e65f-4505-47e4-9567-e87574b6574e received successfully
+api1          | 2025-08-07T09:10:45.804Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.821Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 71b0a9e7-638f-4a83-99d1-9f56a95d9254
+api2          | 2025-08-07T09:10:45.822Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 71b0a9e7-638f-4a83-99d1-9f56a95d9254 received successfully
+api2          | 2025-08-07T09:10:45.822Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.839Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 4ae09145-ce50-406a-a141-6fbf074bfc43
+api1          | 2025-08-07T09:10:45.840Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 4ae09145-ce50-406a-a141-6fbf074bfc43 received successfully
+api1          | 2025-08-07T09:10:45.840Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.857Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending df5df87b-a843-4292-9471-ac5b87b774ae
+api2          | 2025-08-07T09:10:45.857Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment df5df87b-a843-4292-9471-ac5b87b774ae received successfully
+api2          | 2025-08-07T09:10:45.858Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.882Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1cd30126-a48d-4cbe-90b8-7e0bf5834c34
+api1          | 2025-08-07T09:10:45.883Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1cd30126-a48d-4cbe-90b8-7e0bf5834c34 received successfully
+api1          | 2025-08-07T09:10:45.883Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.893Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ca4b9aa9-ef16-4926-8122-42a0d583e40c
+api1          | 2025-08-07T09:10:45.894Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 9d481ad3-5065-4279-9dac-20e879c72b52
+api2          | 2025-08-07T09:10:45.894Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ca4b9aa9-ef16-4926-8122-42a0d583e40c received successfully
+api2          | 2025-08-07T09:10:45.894Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.894Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 9d481ad3-5065-4279-9dac-20e879c72b52 received successfully
+api1          | 2025-08-07T09:10:45.894Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.913Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 80a042c8-1cf5-4f53-a801-441b589515b0
+api2          | 2025-08-07T09:10:45.914Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 80a042c8-1cf5-4f53-a801-441b589515b0 received successfully
+api2          | 2025-08-07T09:10:45.914Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.914Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 38f9b93e-4963-4689-8bcf-de70bafcdfaa
+api1          | 2025-08-07T09:10:45.915Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 38f9b93e-4963-4689-8bcf-de70bafcdfaa received successfully
+api1          | 2025-08-07T09:10:45.915Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.930Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 2f06a812-ea3b-4864-9da3-32aa52405b97
+api2          | 2025-08-07T09:10:45.930Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 2f06a812-ea3b-4864-9da3-32aa52405b97 received successfully
+api2          | 2025-08-07T09:10:45.931Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.949Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending b9a61bee-99d5-4a71-bd0c-ddfaf20f1932
+api1          | 2025-08-07T09:10:45.949Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment b9a61bee-99d5-4a71-bd0c-ddfaf20f1932 received successfully
+api1          | 2025-08-07T09:10:45.950Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:45.966Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 67135d0d-c61a-4c34-83da-deaad9d303a5
+api2          | 2025-08-07T09:10:45.966Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 67135d0d-c61a-4c34-83da-deaad9d303a5 received successfully
+api2          | 2025-08-07T09:10:45.967Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:45.986Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5a33055b-85ab-4535-95e5-5836b9e69212
+api1          | 2025-08-07T09:10:45.987Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5a33055b-85ab-4535-95e5-5836b9e69212 received successfully
+api1          | 2025-08-07T09:10:45.987Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.003Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 5e6bc9c7-b216-4d33-99a7-2da4ed42efd3
+api1          | 2025-08-07T09:10:46.003Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d3a504d8-c467-4bef-9831-8e86a62e0cd9
+api2          | 2025-08-07T09:10:46.004Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 5e6bc9c7-b216-4d33-99a7-2da4ed42efd3 received successfully
+api2          | 2025-08-07T09:10:46.004Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.004Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d3a504d8-c467-4bef-9831-8e86a62e0cd9 received successfully
+api1          | 2025-08-07T09:10:46.004Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.019Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 1130c1ed-d660-4078-8496-11d965c88717
+api2          | 2025-08-07T09:10:46.020Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 1130c1ed-d660-4078-8496-11d965c88717 received successfully
+api2          | 2025-08-07T09:10:46.020Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.021Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f4b6ec44-ed78-44c9-8d2b-da87ca2871b2
+api1          | 2025-08-07T09:10:46.022Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f4b6ec44-ed78-44c9-8d2b-da87ca2871b2 received successfully
+api1          | 2025-08-07T09:10:46.022Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.039Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ae839167-2220-491f-85ce-f1b14de5257a
+api2          | 2025-08-07T09:10:46.040Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ae839167-2220-491f-85ce-f1b14de5257a received successfully
+api2          | 2025-08-07T09:10:46.040Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.057Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ab547e85-9ce1-471f-ac63-306fb486d472
+api1          | 2025-08-07T09:10:46.058Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ab547e85-9ce1-471f-ac63-306fb486d472 received successfully
+api1          | 2025-08-07T09:10:46.058Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.076Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 421a9e77-f56f-4b94-be71-5067714ff7d7
+api2          | 2025-08-07T09:10:46.077Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 421a9e77-f56f-4b94-be71-5067714ff7d7 received successfully
+api2          | 2025-08-07T09:10:46.077Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.092Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f9f6ed0a-1b35-4965-9015-1e047b7d91cf
+api1          | 2025-08-07T09:10:46.093Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment f9f6ed0a-1b35-4965-9015-1e047b7d91cf received successfully
+api1          | 2025-08-07T09:10:46.093Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.110Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8cc46ebc-5b3a-415b-9254-fe2ce96c4ac9
+api2          | 2025-08-07T09:10:46.111Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8cc46ebc-5b3a-415b-9254-fe2ce96c4ac9 received successfully
+api2          | 2025-08-07T09:10:46.111Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.112Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending becb57ba-674e-4c22-8467-4b34323dad6a
+api1          | 2025-08-07T09:10:46.113Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment becb57ba-674e-4c22-8467-4b34323dad6a received successfully
+api1          | 2025-08-07T09:10:46.113Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.128Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending d789cda5-8294-4e7d-bf22-f15672c74ee6
+api2          | 2025-08-07T09:10:46.129Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment d789cda5-8294-4e7d-bf22-f15672c74ee6 received successfully
+api2          | 2025-08-07T09:10:46.129Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.130Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending c0415b52-1848-4952-bf89-059edb84d34a
+api1          | 2025-08-07T09:10:46.131Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment c0415b52-1848-4952-bf89-059edb84d34a received successfully
+api1          | 2025-08-07T09:10:46.131Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.149Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 6804b8dc-5f1d-4aa2-8693-97fc09351d0a
+api2          | 2025-08-07T09:10:46.150Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 6804b8dc-5f1d-4aa2-8693-97fc09351d0a received successfully
+api2          | 2025-08-07T09:10:46.150Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.184Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 196da2b2-8254-4a4d-b65d-151803dcaa27
+api1          | 2025-08-07T09:10:46.184Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 558852ed-24a3-4321-85f2-ac798ac7feb6
+api1          | 2025-08-07T09:10:46.185Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 558852ed-24a3-4321-85f2-ac798ac7feb6 received successfully
+api2          | 2025-08-07T09:10:46.185Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 196da2b2-8254-4a4d-b65d-151803dcaa27 received successfully
+api1          | 2025-08-07T09:10:46.185Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.185Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.202Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ad7eb47a-4b10-4202-9dd9-29bd0fb53fc9
+api1          | 2025-08-07T09:10:46.203Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ad7eb47a-4b10-4202-9dd9-29bd0fb53fc9 received successfully
+api1          | 2025-08-07T09:10:46.203Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.221Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 8cb77ccd-e876-4f04-8753-f8927f58d417
+api1          | 2025-08-07T09:10:46.222Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 03230c75-5d4c-46de-a56b-be0623c524fe
+api2          | 2025-08-07T09:10:46.222Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 8cb77ccd-e876-4f04-8753-f8927f58d417 received successfully
+api1          | 2025-08-07T09:10:46.222Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 03230c75-5d4c-46de-a56b-be0623c524fe received successfully
+api2          | 2025-08-07T09:10:46.222Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.222Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.239Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3f2f1f74-f075-4c42-a517-be3896f25628
+api2          | 2025-08-07T09:10:46.239Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 80a70f1d-d3dc-4540-b407-cef8d2834b43
+api1          | 2025-08-07T09:10:46.240Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3f2f1f74-f075-4c42-a517-be3896f25628 received successfully
+api2          | 2025-08-07T09:10:46.240Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 80a70f1d-d3dc-4540-b407-cef8d2834b43 received successfully
+api2          | 2025-08-07T09:10:46.240Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.240Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.258Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 3739bcc7-9de1-4465-95a5-14b39e2ca4fa
+api2          | 2025-08-07T09:10:46.259Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 3739bcc7-9de1-4465-95a5-14b39e2ca4fa received successfully
+api2          | 2025-08-07T09:10:46.259Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.275Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 15714d53-ac2c-4126-b4ef-572ea01b8b4c
+api1          | 2025-08-07T09:10:46.276Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 15714d53-ac2c-4126-b4ef-572ea01b8b4c received successfully
+api1          | 2025-08-07T09:10:46.276Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.294Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending ef042f09-aa75-4d8e-bea8-6fa0bd74f45b
+api2          | 2025-08-07T09:10:46.295Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment ef042f09-aa75-4d8e-bea8-6fa0bd74f45b received successfully
+api2          | 2025-08-07T09:10:46.295Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api1          | 2025-08-07T09:10:46.311Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending 9385693e-0d0e-499d-afbd-e464e7f41387
+api1          | 2025-08-07T09:10:46.312Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Payment 9385693e-0d0e-499d-afbd-e464e7f41387 received successfully
+api1          | 2025-08-07T09:10:46.312Z  INFO 1 --- [api] [     virtual-76] br.com.wlsc.api.worker.PaymentWorker     : Payment saved in the database
+api2          | 2025-08-07T09:10:46.331Z  INFO 1 --- [api] [     virtual-76] b.c.w.a.c.processor.ProcessorService     : Sending f21cea6d-7796-4084-8cee-a569a613a4da
+log truncated at line 1000

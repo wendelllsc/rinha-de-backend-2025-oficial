@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **qui 07 ago 2025 07:38:30 -03**
+Atualizado em **qui 07 ago 2025 07:41:34 -03**
 258 submissões / 234 resultados / 24 submissões com erro
 
 
@@ -226,7 +226,7 @@ Atualizado em **qui 07 ago 2025 07:38:30 -03**
 |	wallacemendes-node	|	170.4ms	|	0%	|	0	|	303940.6599999682	|	[wallacemendes-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wallacemendes-node)
 |	wellington-pacheco-fine-tunning	|	3.7ms	|	15%	|	0	|	363904.68325	|	[wellington-pacheco-fine-tunning](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco-fine-tunning)
 |	wellington-pacheco	|	2.84ms	|	16%	|	0	|	367208.73000003176	|	[wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco)
-|	wendelllsc	|	1.69ms	|	19%	|	110822.55275	|	265974.1266	|	[wendelllsc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wendelllsc)
+|	wendelllsc	|	0.98ms	|	20%	|	110551.9625	|	268483.3375	|	[wendelllsc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wendelllsc)
 |	wendelmax	|	282.68ms	|	0%	|	71909.446	|	133546.114	|	[wendelmax](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wendelmax)
 |	wesley-frias	|	5.21ms	|	12%	|	103793.82299998577	|	228346.4105999687	|	[wesley-frias](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wesley-frias)
 |	wiliansimoes-dotnet	|	48.92ms	|	0%	|	0	|	307595.295	|	[wiliansimoes-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wiliansimoes-dotnet)

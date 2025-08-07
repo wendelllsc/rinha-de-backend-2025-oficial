@@ -25,7 +25,7 @@ x-app-template:
     DB_PASS: "rinha"
     WORKER_POOL_SIZE: 1
     CLIENT_MAX_CONNECTIONS: 200
-    QUEUE_SIZE: 5000
+    QUEUE_SIZE: 6000
     PROCESSOR_MAX_RETRIES: 10
     JAVA_TOOL_OPTIONS: >
       --enable-preview

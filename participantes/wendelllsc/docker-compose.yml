@@ -13,7 +13,7 @@ x-app-template:
       resources:
         limits:
           cpus: "0.6"
-          memory: "85MB"
+          memory: "125MB"
 
   app-env: &app-env
     SERVER_PORT: "8080"
@@ -57,7 +57,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "160MB"
+          memory: "80MB"
     networks:
       - backend
 
